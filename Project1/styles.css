@@ -1,0 +1,193 @@
+/* Reset some basic elements */
+body, h1, h2, p, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-container {
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+input[type="text"] {
+    background-color: #f4f4f4;
+}
+
+input[type="file"] {
+    background-color: #f4f4f4;
+    padding: 8px;
+    cursor: pointer;
+}
+
+button {
+    width: 50%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.card-preview {
+    padding: 20px;
+    text-align: center;
+    background-image: url('assets/images/background.jpg'); /* Path to the background image */
+    background-size: cover; /* Ensure the background image covers the card preview */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating of the background image */
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 380px; /* Adjusted height for a more vertical appearance */
+    background-color: #f7f9fc;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('assets/images/default-card-background2.jpg'); /* Default background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 50px;
+    height: 100%; 
+    justify-content: flex-start; /* Align content towards the top */
+    padding-top: 40px; /* Adjust this to move the entire container up or down */
+    position: relative;
+}
+
+.profile-img {
+    width: 120px; /* Fixed size for the profile image container */
+    height: 120px; /* Ensures the container is perfectly circular */
+    border-radius: 50%; /* Circular shape */
+    border: 4px solid #007bff;
+    background-color: transparent; /* Placeholder color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures the image doesn't overflow the circle */
+    margin-top: 120px; /* Space between picture and name */
+    position: relative;
+    background-image: url('assets/images/default-profile.jpg'); /* Default background image */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+}
+
+.profile-img img {
+    width: 100%; /* Ensure the uploaded image fits the container */
+    height: 100%; /* Ensure the uploaded image fits the container */
+    object-fit: cover; /* Adjusts the uploaded image to cover the container */
+    border-radius: 50%; /* Keeps the uploaded image circular */
+    position: absolute; /* Ensures the uploaded image is centered */
+    top: 0; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+}
+
+h2 {
+    margin: 0; /* Remove any default margin */
+    color: #fff;
+    font-size: 22px; /* Adjusted font size */
+    text-align: center; /* Center text */
+    z-index: 1; /* Ensure name stays above background */
+    position: relative;
+    margin-top: -180px; /* Space between the name and the profile picture */
+}
+
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.social-icons a {
+    background-color: #2b2929;
+    color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #0056b3;
+}
+
+.social-icons i {
+    margin: 0;
+}
