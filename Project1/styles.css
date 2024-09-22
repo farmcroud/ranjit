@@ -108,7 +108,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('assets/images/default-card-background2.jpg'); /* Default background image */
+    background-image: url('assets/images/web\ card.png'); /* Default background image */
     background-size: cover;
     background-position: center;
 }
