@@ -1,20 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('cardForm');
-    const profilePictureInput = document.getElementById('profilePicture');
-    const profileImage = document.getElementById('profileImage');
-    const userName = document.getElementById('userName');
     const downloadCard = document.getElementById('downloadCard');
-    const card = document.getElementById('card'); // This is the entire card element
+    const cardElement = document.getElementById('card'); // The card element to capture
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         const name = document.getElementById('name').value;
-        userName.textContent = name;
+        const profilePictureInput = document.getElementById('profilePicture');
+        const profileImage = document.getElementById('profileImage');
 
+        // Update the name on the card
+        document.getElementById('userName').textContent = name;
+
+        // If a profile picture is uploaded, update it on the card
         const file = profilePictureInput.files[0];
         if (file) {
             const reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 profileImage.src = e.target.result;
             };
             reader.readAsDataURL(file);
@@ -22,12 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     downloadCard.addEventListener('click', () => {
-        html2canvas(card, {
-            useCORS: true, // To support cross-origin images
-            scale: 2 // Increase resolution for better image quality
-        }).then((canvas) => {
+        html2canvas(cardElement, { scale: 2 }).then(canvas => {
             const link = document.createElement('a');
-            link.href = canvas.toDataURL('image/jpeg', 1.0); // Highest quality
+            link.href = canvas.toDataURL('image/jpeg', 1.0); // High-quality JPEG
             link.download = 'profile-card.jpg';
             link.click();
         });
