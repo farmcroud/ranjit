@@ -11,7 +11,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
     overflow: auto; /* Allow body to scroll if content overflows */
     width: 100%; /* Full width */
 }
