@@ -24,10 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     downloadCard.addEventListener('click', () => {
-        const scaleFactor = window.devicePixelRatio || 2; // Adjust for high-DPI screens
-
-        html2canvas(cardElement, { scale: scaleFactor, useCORS: true }).then(canvas => {
-            // Ensure the canvas is in high resolution for devices with different pixel ratios
+        html2canvas(cardElement, { scale: 2 }).then(canvas => {
             const link = document.createElement('a');
             link.href = canvas.toDataURL('image/jpeg', 1.0); // High-quality JPEG
             link.download = 'profile-card.jpg';
