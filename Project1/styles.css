@@ -106,7 +106,7 @@ button:hover {
 /* Card */
 .card {
     position: relative;
-    width: 100%;
+    width: 300px;
     max-width: 300px;
     height: 380px;
     background-color: #f7f9fc;
